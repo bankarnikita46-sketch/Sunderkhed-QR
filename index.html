@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grampanchayat Sundarkhed UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans Devanagari', sans-serif; background-color: #f8fafc; color: #334155; }
+        .card-shadow { box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .rotate-180 { transform: rotate(180deg); }
+        .content-section { display: none; }
+    </style>
+</head>
+<body class="p-4 md:p-6 lg:p-10">
+
+    <div class="max-w-2xl mx-auto space-y-4">
+        
+        <header class="bg-[#2d5a27] text-white p-4 rounded-t-2xl flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
+                      <img src="logo.png" alt="logo" class="w-8 h-8"/>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">ग्रामपंचायत सुंदरखेड</h1>
+                    <p class="text-xs font-light opacity-90">तालुका बुलढाणा, जिल्हा बुलढाणा</p>
+                </div>
+            </div>
+            <div class="text-right flex items-center gap-2">
+                <img src="qr.png" class="w-7 h-7" />
+                <span class="text-[10px] leading-tight font-medium text-left">QR आधारित<br>ग्रामपंचायत सेवा</span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 bg-white py-4 rounded-xl card-shadow border border-gray-100 divide-x divide-gray-100">
+            <div class="flex items-center gap-2 px-3">
+                <div class="shrink-0 bg-green-50 p-1.5 rounded-lg"><img src="https://img.icons8.com/material-outlined/48/2d5a27/document--v1.png" class="w-4 h-4"/></div>
+                <div class="space-y-1">
+                    <p class="text-[10px] text-gray-700 leading-none">नमुना</p>
+                    <p class="text-xs font-bold leading-tight">नमुना क्र. 1</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 px-3">
+                <div class="shrink-0 bg-green-50 p-1.5 rounded-lg"><img src="https://img.icons8.com/fluency-systems-regular/48/2d5a27/calendar.png" class="w-4 h-4"/></div>
+                <div class="space-y-1">
+                    <p class="text-[10px] text-gray-700 leading-none">वर्ष</p>
+                    <p class="text-xs font-bold leading-tight">2025-26</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 px-3">
+                <div class="shrink-0 bg-green-50 p-1.5 rounded-lg"><img src="https://img.icons8.com/material-outlined/48/2d5a27/folder-invoices--v1.png" class="w-4 h-4"/></div>
+                <div class="space-y-1">
+                    <p class="text-[10px] text-gray-700 leading-none">विभाग</p>
+                    <p class="text-xs font-bold leading-tight">लेखा विभाग</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 px-3">
+                <div class="shrink-0 bg-green-50 p-1.5 rounded-lg"><img src="https://img.icons8.com/material-outlined/48/2d5a27/info--v1.png" class="w-4 h-4"/></div>
+                <div class="space-y-1">
+                    <p class="text-[10px] text-gray-700 leading-none">प्रकार</p>
+                    <p class="text-xs font-bold leading-tight">नोंदवही/अहवाल</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-transparent hover:border-green-100 transition-all cursor-pointer" onclick="toggleSection('sec1', 'arr1')">
+            <div class="flex gap-5 items-start">
+                <div class="bg-green-50 p-4 rounded-full"><img src="https://img.icons8.com/ios/50/2d5a27/open-book.png" class="w-7 h-7"/></div>
+                <div class="flex-1 self-center">
+                    <h3 class="text-[#2d5a27] font-bold text-lg"><span class="underline underline-offset-4 decoration-[#2d5a27]">1. ले</span>खासंहिता</h3>
+                </div>
+                <div class="bg-green-50 rounded-full p-1 self-center transition-transform duration-300" id="arr1"><img src="https://img.icons8.com/ios-glyphs/30/2d5a27/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec1" class="content-section mt-4 ml-1 md:ml-16">
+                <p class="text-xs text-gray-700 mt-1">या नमुन्याबाबत शासन निर्णयानुसार आवश्यक नियम व अटी खालीलप्रमाणे आहेत.</p>
+                <ul class="list-disc list-inside text-xs text-gray-700 mt-3 space-y-1.5">
+                    <li>सर्व माहिती अचूक व पूर्ण भरणे आवश्यक आहे.</li>
+                    <li>खोडाखोड करू नये. चूक असल्यास सही करून सुधारित करावे.</li>
+                    <li>आवश्यक तेथे संबंधित कागदपत्रांची जोड देणे बंधनकारक आहे.</li>
+                    <li>नमुना वेळेत संबंधित कार्यालयात सादर करणे आवश्यक आहे.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-transparent hover:border-blue-100 transition-all cursor-pointer" onclick="toggleSection('sec2', 'arr2')">
+            <div class="flex gap-5 items-start">
+                <div class="bg-blue-50 p-4 rounded-full"><img src="https://img.icons8.com/ios/50/1e40af/info.png" class="w-7 h-7"/></div>
+                <div class="flex-1 self-center">
+                    <h3 class="text-blue-800 font-bold text-lg"><span class="underline underline-offset-4 decoration-blue-800">2. न</span>मुन्याबद्दल माहिती</h3>
+                </div>
+                <div class="bg-blue-50 rounded-full p-1 self-center transition-transform duration-300" id="arr2"><img src="https://img.icons8.com/ios-glyphs/30/1e40af/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec2" class="content-section mt-4 ml-1 md:ml-16">
+                <p class="text-xs text-gray-700 leading-relaxed">हा नमुना ग्रामपंचायतीच्या दैनंदिन कामकाजात / आर्थिक व्यवहारात वापरला जातो.</p>
+                <p class="text-xs text-gray-700 mt-2 leading-relaxed">यामध्ये दिनांकानुसार संबंधित तपशील नोंदविणे आवश्यक आहे.</p>
+            </div>
+        </div>
+
+        <!-- Section 3: 4 Boxes kept as requested -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-transparent hover:border-orange-100 transition-all cursor-pointer" onclick="toggleSection('sec3', 'arr3')">
+            <div class="flex gap-5 items-start">
+                <div class="bg-orange-50 p-4 rounded-full"><img src="https://img.icons8.com/ios/50/c2410c/edit.png" class="w-7 h-7"/></div>
+                <div class="flex-1 self-center">
+                    <h3 class="text-orange-700 font-bold text-lg"><span class="underline underline-offset-4 decoration-orange-700">3. न</span>मुना कसा भरावा?</h3>
+                </div>
+                <div class="bg-orange-50 rounded-full p-1 self-center transition-transform duration-300" id="arr3"><img src="https://img.icons8.com/ios-glyphs/30/c2410c/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec3" class="content-section mt-6">
+                <div class="flex items-stretch justify-between gap-2 px-2">
+                    <div class="bg-orange-50/50 p-3 rounded-xl text-center flex-1 border border-orange-100 relative">
+                        <span class="absolute top-2 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">1</span>
+                        <p class="text-[10px] mt-6 font-medium text-orange-900 leading-tight">सर्वप्रथम शीर्षकाबाबतची माहिती (ग्रामपंचायत, वर्ष इ.) भरा.</p>
+                    </div>
+                    <span class="text-gray-300 font-light flex items-center justify-center self-center text-lg">❯</span>
+                    <div class="bg-orange-50/50 p-3 rounded-xl text-center flex-1 border border-orange-100 relative">
+                        <span class="absolute top-2 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">2</span>
+                        <p class="text-[10px] mt-6 font-medium text-orange-900 leading-tight">मुख्य तपशीलमध्ये सर्व तपशील दिनांकानुसार नोंदवा.</p>
+                    </div>
+                    <span class="text-gray-300 font-light flex items-center justify-center self-center text-lg">❯</span>
+                    <div class="bg-orange-50/50 p-3 rounded-xl text-center flex-1 border border-orange-100 relative">
+                        <span class="absolute top-2 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">3</span>
+                        <p class="text-[10px] mt-6 font-medium text-orange-900 leading-tight">शेवटी एकूण रक्कम व सही / मोहर घेणे आवश्यक आहे.</p>
+                    </div>
+                    <span class="text-gray-300 font-light flex items-center justify-center self-center text-lg">❯</span>
+                    <div class="bg-orange-50/50 p-3 rounded-xl text-center flex-1 border border-orange-100 relative">
+                        <span class="absolute top-2 left-1/2 -translate-x-1/2 bg-orange-600 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold">4</span>
+                        <p class="text-[10px] mt-6 font-medium text-orange-900 leading-tight">संपूर्ण नमुना तपासून कार्यालयात सादर करा.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-transparent hover:border-purple-100 transition-all cursor-pointer" onclick="toggleSection('sec4', 'arr4')">
+            <div class="flex gap-5 items-center">
+                <div class="bg-purple-50 p-4 rounded-full"><img src="https://img.icons8.com/ios/50/6b21a8/privacy.png" class="w-7 h-7"/></div>
+                <div class="flex-1">
+                    <h3 class="text-purple-900 font-bold text-lg"><span class="underline underline-offset-4 decoration-purple-900">4. भ</span>रलेला नमुना (Sample)</h3>
+                </div>
+                <div class="bg-purple-50 rounded-full p-1 transition-transform duration-300" id="arr4"><img src="https://img.icons8.com/ios-glyphs/30/6b21a8/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec4" class="content-section mt-4 ml-1 md:ml-16">
+                <p class="text-[11px] text-gray-700 mb-3">योग्य प्रकारे भरलेला नमुना पाहण्यासाठी खालील फाईल डाउनलोड करा.</p>
+                <div class="flex items-center justify-between">
+                    <a href="sample.pdf" download class="bg-[#6b21a8] text-white px-5 py-2 rounded-lg text-xs font-bold flex items-center gap-2 shadow-md w-fit">
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/download--v1.png" class="w-4 h-4"/> Sample नमुना डाउनलोड करा (PDF)
+                    </a>
+                    <a href="page.png" target="_blank"><img src="page.png" class="w-12 h-12 opacity-80" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5 -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-transparent hover:border-emerald-100 transition-all cursor-pointer" onclick="toggleSection('sec5', 'arr5')">
+            <div class="flex gap-5 items-center">
+                <div class="bg-emerald-50 p-4 rounded-full"><img src="https://img.icons8.com/ios/50/065f46/document--v1.png" class="w-7 h-7"/></div>
+                <div class="flex-1">
+                    <h3 class="text-emerald-900 font-bold text-lg"><span class="underline underline-offset-4 decoration-emerald-900">5. न</span>मुना डाउनलोड करा</h3>
+                </div>
+                <div class="bg-emerald-50 rounded-full p-1 transition-transform duration-300" id="arr5"><img src="https://img.icons8.com/ios-glyphs/30/065f46/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec5" class="content-section mt-4 ml-1 md:ml-16">
+                <p class="text-[11px] text-gray-700 mb-3">रिकाम्या नमुना (Blank Format) डाउनलोड करून प्रिंट काढून वापरावा.</p>
+                <div class="flex items-center justify-between">
+                    <a href="sample.pdf" download class="bg-[#065f46] text-white px-5 py-2 rounded-lg text-xs font-bold flex items-center gap-2 shadow-md w-fit">
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/download--v1.png" class="w-4 h-4"/> रिकाम्या नमुना डाउनलोड करा (PDF)
+                    </a>
+                    <img src="pdf.png" class="w-10 h-10" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 6: Video Updated with new Link and Thumbnail -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-transparent hover:border-yellow-100 transition-all cursor-pointer" onclick="toggleSection('sec6', 'arr6')">
+            <div class="flex gap-5 items-center">
+                <div class="bg-yellow-50 p-4 rounded-full"><img src="https://img.icons8.com/ios-filled/50/854d0e/youtube-play.png" class="w-7 h-7"/></div>
+                <div class="flex-1">
+                    <h3 class="text-yellow-800 font-bold text-lg"><span class="underline underline-offset-4 decoration-yellow-800">6. मा</span>र्गदर्शन व्हिडिओ</h3>
+                </div>
+                <div class="bg-yellow-50 rounded-full p-1 transition-transform duration-300" id="arr6"><img src="https://img.icons8.com/ios-glyphs/30/854d0e/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec6" class="content-section mt-4 ml-1 md:ml-16">
+                <p class="text-[11px] text-gray-700 mb-3">नमुना कसा भरायचा यासाठी खालील व्हिडिओ पहा.</p>
+                <div class="flex gap-4 items-center">
+                    <a href="https://www.youtube.com/watch?v=li73nBQQwKI" target="_blank" class="bg-[#a16207] text-white px-5 py-2 rounded-lg text-xs font-bold flex items-center gap-2 shadow-md w-fit">
+                        ▶ व्हिडिओ पहा (YouTube)
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=li73nBQQwKI" target="_blank">
+                        <img src="https://img.youtube.com/vi/li73nBQQwKI/0.jpg" class="w-24 h-14 rounded-lg border shadow-sm" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 7 -->
+        <div class="bg-white rounded-2xl p-4 card-shadow border border-blue-200 transition-all cursor-pointer" onclick="toggleSection('sec7', 'arr7')">
+            <div class="flex gap-5 items-center">
+                <div class="bg-blue-50 p-4 rounded-full"><img src="https://img.icons8.com/ios-filled/50/2563eb/upload-to-cloud.png" class="w-7 h-7"/></div>
+                <div class="flex-1">
+                    <h3 class="text-blue-700 font-bold text-lg"><span class="underline underline-offset-4 decoration-blue-700">7. र</span>जिस्टरची पृष्ठे अपलोड करा</h3>
+                </div>
+                <div class="bg-blue-50 rounded-full p-1 transition-transform duration-300" id="arr7"><img src="https://img.icons8.com/ios-glyphs/30/1e40af/expand-arrow.png" class="w-4 h-4"/></div>
+            </div>
+            <div id="sec7" class="content-section mt-6" onclick="event.stopPropagation()">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-5 text-left">
+                    <div>
+                        <label class="block text-[11px] font-semibold mb-1">पेज नंबर <span class="text-red-500">*</span></label>
+                        <input type="text" id="pageNo" placeholder="उदा. 1" class="w-full border rounded-lg px-3 py-2 text-xs outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-semibold mb-1">वर्णन <span class="text-red-500">*</span></label>
+                        <input type="text" id="description" placeholder="उदा. कर आकारणी" class="w-full border rounded-lg px-3 py-2 text-xs outline-none">
+                    </div>
+                </div>
+                <div onclick="document.getElementById('fileInput').click()" class="border-2 border-dashed border-gray-100 rounded-xl p-6 text-center bg-gray-50 cursor-pointer">
+                    <p id="fileStatus" class="text-[10px] text-gray-500">येथे फाईल निवडा</p>
+                    <input type="file" id="fileInput" class="hidden" onchange="handleFileSelect()">
+                </div>
+                <div class="flex justify-between mt-5">
+                    <button onclick="openModal()" class="text-blue-700 text-[11px] font-bold underline">👁 अपलोड केलेली पृष्ठे (<span id="fileCountBadge">0</span>)</button>
+                    <button onclick="saveData()" class="bg-[#2d5a27] text-white px-6 py-2 rounded-lg text-xs font-bold">अपलोड करा</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="uploadModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+            <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
+                <div class="flex justify-between items-center p-4 border-b">
+                    <h3 class="font-bold text-blue-700">अपलोड केलेली पृष्ठे</h3>
+                    <button onclick="closeModal()" class="text-gray-400 text-xl font-bold">&times;</button>
+                </div>
+                <div class="p-4 max-h-[50vh] overflow-y-auto">
+                    <table class="w-full text-[11px] text-left border-collapse">
+                        <thead><tr class="bg-blue-50"><th class="p-2 border">पेज</th><th class="p-2 border">वर्णन</th><th class="p-2 border">फाईल</th><th class="p-2 border">Action</th></tr></thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+                <div class="p-3 bg-gray-50 text-center"><button onclick="closeModal()" class="text-xs font-bold text-gray-500">बंद करा</button></div>
+            </div>
+        </div>
+
+        <footer class="pt-4 pb-8 border-t border-gray-200 mt-6 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-400 gap-2">
+            <div class="flex items-center gap-1 font-medium"><span class="text-green-700"> 📞 अधिक माहितीसाठी संपर्क:</span> ग्रामसेवक कार्यालय — 02164-XXXXXX </div>
+            <div>© 2025 ग्रामपंचायत सुंदरखेड. सर्व हक्क राखीव.</div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleSection(secId, arrowId) {
+            const content = document.getElementById(secId);
+            const arrow = document.getElementById(arrowId);
+            const isHidden = content.style.display === "none" || content.style.display === "";
+            content.style.display = isHidden ? "block" : "none";
+            if (isHidden) arrow.classList.add('rotate-180');
+            else arrow.classList.remove('rotate-180');
+        }
+
+        let uploadedData = [];
+        function handleFileSelect() {
+            const input = document.getElementById('fileInput');
+            const status = document.getElementById('fileStatus');
+            if (input.files.length > 0) status.innerText = "निवडलेली फाईल: " + input.files[0].name;
+        }
+
+        function saveData() {
+            const page = document.getElementById('pageNo').value;
+            const desc = document.getElementById('description').value;
+            const fileInput = document.getElementById('fileInput');
+            if (!page || !desc || !fileInput.files[0]) { alert("माहिती भरा!"); return; }
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                uploadedData.push({ page, description: desc, imgSrc: e.target.result });
+                document.getElementById('fileCountBadge').innerText = uploadedData.length;
+                alert("यशस्वी!");
+                document.getElementById('pageNo').value = '';
+                document.getElementById('description').value = '';
+                document.getElementById('fileStatus').innerText = "येथे फाईल निवडा";
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+
+        function openModal() {
+            const body = document.getElementById('tableBody');
+            document.getElementById('uploadModal').classList.remove('hidden');
+            body.innerHTML = uploadedData.map((item, index) => `
+                <tr class="border-b"><td class="p-2 border">${item.page}</td><td class="p-2 border">${item.description}</td><td class="p-2 border"><img src="${item.imgSrc}" class="w-8 h-6 mx-auto"></td><td class="p-2 border text-center"><button onclick="deleteItem(${index})" class="text-red-500">X</button></td></tr>
+            `).join('');
+        }
+        function closeModal() { document.getElementById('uploadModal').classList.add('hidden'); }
+        function deleteItem(i) { uploadedData.splice(i, 1); document.getElementById('fileCountBadge').innerText = uploadedData.length; openModal(); }
+    </script>
+</body>
+</html>
